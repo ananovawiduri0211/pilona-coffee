@@ -558,16 +558,12 @@ padding-top: 70px;
 }
 
 /* Responsivitas untuk Layar Kecil/HP */
-@media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom di tablet */
-  }
-}
-
-@media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
-  }
+@media (max-width: 768px) {
+    .menu-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Jadi 2 kolom kiri-kanan */
+        gap: 15px; /* Kasih jarak antar menu */
+    }
 }
 
 .gallery {
