@@ -1,0 +1,1220 @@
+:root {
+  --warna-utama: #3E1F13;;
+
+  --warna-utama-gelap: #2a140c;
+
+  --warna-sekunder: #000000;
+
+  --warna-aksen: #6B4F3A;
+
+  --warna-latar: #6d5e3f;
+
+  --warna-putih: #ffffff;
+  --warna-teks: #2c1b12;
+
+  --warna-teks-abu: #383527;
+
+  --warna-garis: #eee5d8;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #81623b77;
+  color: var(--warna-teks);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-tag {
+  display: block;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--warna-sekunder);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--warna-sekunder);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--warna-putih);
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin: 0 auto 50px;
+}
+
+.highlight {
+  color: var(--warna-utama);
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  transform: none !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-wa {
+  background-color: #000000;
+  color: var(--warna-putih);
+}
+
+.btn-wa:hover {
+  background-color: #000000;
+}
+
+.btn-large {
+  padding: 18px 44px;
+  font-size: 1.1rem;
+}
+
+.btn-outline {
+  border: 2px solid var(--warna-latar);
+  color: var(--warna-putih);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--warna-latar);
+  color: var(--warna-sekunder);
+}
+
+.btn-outline-dark {
+  /* Hapus display, border-radius, font-weight karena sudah ada di .btn */
+  border: 2px solid var(--warna-utama);
+  color: var(--warna-utama);
+  background: transparent;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+}
+
+.btn-read {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent; /* Sesuaikan dengan warna krem body lu */
+  color: #332211; /* Warna teks gelap agar kontras */
+  border: 1.5px solid #332211; /* Border utuh, bukan cuma bawah */
+  padding: 12px 25px; 
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-read:hover {
+  background-color: #332211;
+  color: #C5B9A5;
+  border-color: #332211;
+}
+
+.navbar {
+  Background-color: rgba(59, 44, 24, 0.904);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--warna-garis);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px; /* Perbesar gap agar logo dan menu punya jarak manis */
+  max-width: 1200px; /* Pastikan ada batas lebar maksimal */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-img {
+  height: 60px; /* Atur tinggi agar seragam dengan teks navbar */
+  width: auto;  /* Biarkan lebar menyesuaikan secara proporsional */
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+/* Opsional: sedikit efek saat di-hover */
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.navbar nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.navbar nav a {
+  color:  #ffffff;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar nav a:hover {
+  color: var(--warna-utama);
+  background: rgba(94, 78, 78, 0.781);
+}
+
+.navbar-wa {
+  padding: 10px 18px;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.hero {
+  background: linear-gradient
+    rgba(15, 9, 6, 0.85),
+    rgba(14, 4, 0, 0.822)
+}
+
+.hero {
+padding-top: 70px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-banner {
+  width: 100%;
+  max-width:400px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+
+  /* Ganti ke 'cover' jika ingin gambar memenuhi lingkaran, 
+     atau tetap 'contain' tapi pastikan alignment-nya center */
+  object-fit: contain; 
+  background-color: rgb(138, 108, 68);
+
+  padding: 40px; /* Perbesar padding agar logo tidak mepet ke pinggir lingkaran cokelat */
+  box-shadow: 0 20px 60px rgba(46, 36, 13, 0.4); /* Kasih sedikit transparansi pada shadow */
+  flex-shrink: 0;
+
+  /* --- TAMBAHKAN INI UNTUK NAIKIN POSISI --- */
+  margin-top: -80px; /* Menarik lingkaran ke atas */
+  align-self: center; /* Memastikan dia sejajar secara vertikal di flexbox */
+  
+  /* Opsional: Biar logonya lebih pas di tengah lingkaran */
+  display: block;
+}
+
+.hero-text {
+  flex: 1;
+  color: var(--warna-sekunder);
+}
+
+.hero-tag {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--warna-aksen);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+.hero .subtitle {
+  font-size: 1.08rem;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 36px;
+  max-width: 460px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.about {
+  padding: 100px 0; /* Tambah padding atas agar tidak dempet dengan section di atasnya */
+  background-color: rgba(59, 44, 24, 0.904);
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-images {
+  position: relative;
+
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+.img-main {
+  width: 85%;
+  height: 450px;
+  object-fit: cover;
+  background-color: #f4f0ff;
+  padding: 0px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.img-small {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 16px;
+  border: 8px solid #fff; 
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.experience-badge {
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+  padding: 15px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(232, 112, 10, 0.2);
+  text-align: center;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.experience-badge strong {
+  font-size: 2.2rem;
+  line-height: 1;
+  font-family: 'Playfair Display', serif;
+}
+
+.experience-badge span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 6px; 
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--warna-sekunder);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  color: var(--warna-sekunder);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.about-checks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.about-checks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--warna-sekunder);
+  font-size: 1.05rem;
+}
+
+.about-checks svg {
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  padding: 6px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+/* Section Wrapper (Tambahkan ini di HTML lu jika belum ada) */
+.section-produk {
+  padding: 80px 0; /* Padding konsisten dengan gallery */
+  padding-bottom: 100px 0;
+  background-color: var(--warna-putih);
+  scroll-margin-top: 100px; /* Biar pas diklik dari navbar nggak ketutup */
+}
+
+/* Container Utama - Mengatur baris dan kolom */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom untuk 3 atas 3 bawah */
+  gap: 30px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Base Card */
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Efek melayang saat di-hover */
+}
+
+/* Wrapper Gambar (Background Ungu Muda) */
+.product-img-wrapper {
+  background-color: #f8f6ff;
+  position: relative;
+  aspect-ratio: 1 / 1; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.product-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+/* Badge (Best Seller / New) */
+.product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #704a32;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Kasih shadow tipis biar 'pop out' dari gambar */
+}
+
+.product-badge.new {
+  background-color: #704a32;
+}
+
+/* Info Produk */
+.product-info {
+  padding: 80px; /* Ditambah sedikit biar teks nggak terlalu mepet border */
+  flex-grow: 1; /* Supaya tinggi card tetap sama walau panjang teks beda */
+}
+
+.product-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.product-info p {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 8px 0 20px 0;
+  line-height: 1.5;
+}
+
+/* Footer (Harga & Tombol) */
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Memaksa harga & tombol selalu di bawah card */
+}
+
+.price {
+  font-weight: 800;
+  color: #31231a;
+  font-size: 1.1rem;
+}
+
+.btn-order {
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Responsivitas untuk Layar Kecil/HP */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom di tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
+  }
+}
+
+.gallery {
+  padding: 80px 0;
+  background-color: var(--warna-latar);
+}
+
+.gallery h2 {
+  margin-top: 0;
+  margin-bottom: 50px; /* Samakan jaraknya dengan judul di section produk */
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  /* Pakai repeat(auto-fit) supaya lebih responsive kalau dibuka di layar kecil */
+  grid-template-columns: repeat(3, 1fr); 
+  /* Gap 25px atau 30px biar lebih lega dan konsisten dengan product-grid */
+  gap: 25px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+
+  background-color: #f8f4ff;
+  padding: 0;
+  border-radius: 12px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  cursor: zoom-in;
+  display: block; /* Menghilangkan gap kecil di bawah gambar */
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Pastikan gambar yang di-hover berada di atas yang lain */
+}
+
+section[id] {
+  /* Memberikan 'jarak aman' saat discroll via anchor link */
+  scroll-margin-top: 100px; 
+}
+
+/* Biar transisi scroll-nya mulus, tambahkan ini di paling atas CSS (selector html) */
+html {
+  scroll-behavior: smooth;
+}
+
+.testimonials {
+  padding: 40px 0;
+  background-color: var(--warna-latar);
+}
+
+.testimonials h2 {
+  margin-top: 0;
+  margin-bottom: 50px; /* Jarak judul ke card sama dengan section lain */
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px; /* Samakan dengan gap produk & gallery */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.testimonial-card {
+  background-color: var(--warna-putih);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.03); /* Border tipis banget biar kelihatan rapi */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: #D4A373;
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+  font-size: 0.95rem;
+  color: v#555;
+  font-style: italic;
+  line-height: 1.8;
+  flex: 1;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--warna-utama);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reviewer-title {
+  font-size: 0.82rem;
+  color: var(--warna-teks-abu);
+}
+
+.how-to-order {
+  padding: 5px 0;
+  background: linear-gradient(135deg,var(--warna-latar)0%, #fdfbf8 100%);
+}
+
+.how-to-order h2 {
+  margin-top: 0;
+  margin-bottom: 50px; /* Konsisten dengan section lain */
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto; /* Hilangkan margin bottom di sini agar tidak tumpang tindih */
+  padding: 0 20px;
+}
+
+.step-card {
+  background-color: var(--warna-putih, #fff);
+  border-radius: 15px;
+  padding: 35px 25px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 4rem;
+  font-weight: 800;
+  /* Gunakan warna garis yang soft agar tidak balapan dengan icon */
+  color: rgba(0,0,0,0.06); 
+  font-style: italic;
+}
+
+ /* Responsif untuk HP (biar jadi tumpuk ke bawah kalau layar kecil) */
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
+    }
+}
+
+.step-icon {
+  font-size: 3rem; /* Diperbesar sedikit biar eye-catching */
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.step-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--warna-sekunder);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.order-cta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 100%; /* Pastikan dia ambil lebar penuh container tapi isinya flex */
+}
+
+.order-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: fit-content; /* KUNCINYA DI SINI: Biar gak lebar selebar layar */
+}
+
+/* LOGO */
+.order-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* WARNA BRAND */
+.grab { background: #00b14f; }
+.gofood { background: #ee2737; }
+.shopee { background: #ee4d2d; }
+
+/* HOVER EFFECT */
+.order-item:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  filter: brightness(1.1); /* Biar warnanya agak menyala pas di-hover */
+}
+
+section#how-to-order {
+  scroll-margin-top: 100px;
+}
+
+.contact {
+  padding: 120px 0;
+  background-color: var(--warna-sekunder);
+}
+
+.contact h2 {
+  margin-top: 0;
+}
+
+.contact .section-tag {
+  color: var(--warna-aksen);
+}
+
+.contact .section-title {
+  color: var(--warna-putih);
+}
+
+.contact .section-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-grid {
+  display: flex; /* Pakai flex biar bisa kiri-kanan */
+  justify-content: space-between; /* Kasih jarak maksimal antar sisi */
+  align-items: flex-start; /* Sejajar atas */
+  gap: 50px; /* Jarak antara info dan kotak maps */
+  margin-top: 40px;
+}
+
+.contact-info {
+  flex: 1; /* Biar dia ngambil sisa ruang yang luas */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Bikin 2 kolom */
+  gap: 30px; /* Jarak antar item kontak */
+}
+
+.contact-item:nth-child(n+3) {
+  grid-column: span 1; 
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-item strong {
+  display: block;
+  color: var(--warna-putih);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact-item a,
+.contact-item span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-item a:hover {
+  color: var(--warna-aksen);
+}
+
+.contact-map {
+  flex: 0 0 380px; /* Kasih lebar tetap 380px biar gak kegepeng */
+  background: rgba(255, 255, 255, 0.05); /* Warna transparan gelap */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Biar isinya di tengah semua */
+}
+
+.map-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--warna-putih);
+}
+
+.map-hint {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+}
+
+.btn-maps {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 32px;
+  border: 2px solid var(--warna-aksen);
+  color: var(--warna-aksen);
+  border-radius: 50px; /* Lonjong Kapsul */
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.btn-maps:hover {
+  background: var(--warna-aksen);
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    flex-direction: column; /* Kalau layar kecil, tumpuk ke bawah */
+  }
+  .contact-info {
+    grid-template-columns: 1fr; /* Info jadi 1 kolom aja di HP */
+  }
+  .contact-map {
+    width: 100%; /* Kotak maps jadi lebar penuh */
+    flex: none;
+  }
+}
+
+
+
+/* ================================================================
+   MOBILE MENU (CSS ONLY)
+================================================================ */
+.menu-checkbox {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: var(--warna-putih);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ================================================================
+   MODAL GAMBAR (LIGHTBOX)
+================================================================ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+  object-fit: contain;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: var(--warna-putih);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: var(--warna-aksen);
+}
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 70px;
+    right: -300px;
+    width: 220px;
+    background-color: var(--warna-sekunder);
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 16px 0 0 16px;
+    box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.4);
+    transition: right 0.3s ease-in-out;
+    gap: 16px;
+    display: flex;
+    z-index: 999;
+  }
+
+  .navbar nav a {
+    font-size: 1.05rem;
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* CSS Checkbox Hack */
+  .menu-checkbox:checked ~ nav {
+    right: 0;
+  }
+
+  .menu-checkbox:checked + .hamburger span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .menu-checkbox:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+
+  .hero-content {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .hero-banner {
+    max-width: 320px;
+    margin: 0 auto 24px;
+  }
+
+  .hero .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  
+
+  
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-banner {
+    max-width: 260px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-images {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .img-main {
+    height: 300px;
+    width: 95%;
+  }
+
+  .img-small {
+    width: 55%;
+    height: 180px;
+    border-width: 6px;
+  }
+
+  .experience-badge {
+    left: -5px;
+    top: 20px;
+    padding: 12px 16px;
+  }
+
+  .experience-badge strong {
+    font-size: 1.6rem;
+  }
+
+  .experience-badge span {
+    font-size: 0.75rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom p {
+  text-align: center !important;
+  margin: 0 auto;
+}
+
+footer {
+  background: rgba(59, 44, 24, 0.904);
+  color: #FFFFFF;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #F5F3EF;
+  font-size: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* PASANG DI SINI */
+section[id] {
+  scroll-margin-top: 110px; /* Angka ini harus sedikit lebih besar dari tinggi Navbar lu */
+}

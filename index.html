@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilona Coffee - Start Your Day Right</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="logopilona5.png" alt="Logo Pilona" class="logo-img" />
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#galeri">Gallery</a>
+        <a href="#review">Review</a>
+        <a href="#cara-order">How to Order</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/6285182169268" class="btn btn-wa navbar-wa" target="_blank">Order Now</a>
+    </div>
+  </header>
+
+  <section class="hero" id="beranda">
+    <div class="container">
+      <div class="hero-content"> 
+
+        <div class="hero-text">
+          <p class="hero-tag">Setiap Tegukan adalah Kebersamaan</p>
+          <h1>START <span class="highlight">YOUR DAY</span><br>WITH PILONA</h1>
+          <p class="subtitle">Fresh brew, good vibes, and a place to belong.</p>
+         
+          <div class="hero-buttons">
+            <a href="#about" class="btn-read">Read More →</a>
+          </div>
+        </div>
+
+        <div class="hero-banner-wrapper"></div>
+        <img src="logo6.png" alt="Banner Pilona" class="hero-banner" />
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <img src="menuutama.png" alt="Foto Utama" class="img-main" />
+          <img src="tambahan.png" alt="Foto Tambahan" class="img-small" />
+          <div class="experience-badge">
+            <strong>4th+</strong>
+            <span>Years<br>Experience</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p class="section-tag">About Pilona</p>
+          <h2 class="about-title">Pilona Hadir Untuk<br><span class="highlight">Kualitas Terbaik</span></h2>
+          <p class="about-description">
+            Pilona Coffee hadir sebagai tempat menikmati kopi berkualitas dengan suasana yang nyaman dan modern. Setiap cangkir kami dibuat dengan penuh passion untuk menemani setiap momen harimu.
+          </p>
+          <ul class="about-checks">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--warna-utama)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>80% Bahan Alami & Segar</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--warna-utama)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Kopi Berkualitas Premium</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--warna-utama)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Dijamin Bikin Candu</span>
+            </li>
+          </ul>
+          <a href="#menu" class="btn btn-outline-dark">Explore Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-produk" id="menu">
+    <div class="container">
+      <p class="section-tag">MENU HIGHLIGHT</p>
+      <h2 class="section-title">Our Best Menu</h2>
+      <p class="section-subtitle">Pilihan kopi terbaik untuk menemani harimu.</p>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <div class="product-badge">Best Seller</div>
+            <img src="bold.png" alt="Bold Coffee" class="product-img" onclick="bukaModal(this.src)" />
+          </div>
+          <div class="product-info">
+            <h3>Kopi Untukmu 2.0 Bold</h3>
+            <p>Bold and Creamy</p>
+            <div class="product-footer">
+              <span class="price">Rp 23.000</span>
+              <a href="https://r.grab.com/g/6-20260508_172156_db4c4a0ab61f464aa15148b31ac2e13e_MEXMPS-6-C3EBR6XUUFUBRX" class="btn-order" target="_blank">Order</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <div class="product-badge new">New</div>
+            <img src="yzamericano.png" alt="Yuzu Americano" class="product-img" onclick="bukaModal(this.src)" />
+          </div>
+          <div class="product-info">
+            <h3>Yuzu Americano</h3>
+            <p>Strong and Fresh</p>
+            <div class="product-footer">
+              <span class="price">Rp 30.000</span>
+              <a href="https://r.grab.com/g/6-20260508_172156_db4c4a0ab61f464aa15148b31ac2e13e_MEXMPS-6-C3EBR6XUUFUBRX" class="btn-order" target="_blank">Order</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="magic.png" alt="Magic Coffee" class="product-img" onclick="bukaModal(this.src)" />
+          </div>
+          <div class="product-info">
+            <h3>Kopi Untukmu 3.0 Magic</h3>
+            <p>Extra Strong and Creamy</p>
+            <div class="product-footer">
+              <span class="price">Rp 30.000</span>
+              <a href="https://r.grab.com/g/6-20260508_172156_db4c4a0ab61f464aa15148b31ac2e13e_MEXMPS-6-C3EBR6XUUFUBRX" class="btn-order" target="_blank">Order</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="matcha.png" alt="Matcha" class="product-img" onclick="bukaModal(this.src)" />
+          </div>
+          <div class="product-info">
+            <h3>Matcha latte</h3>
+            <p>Fresh and Creamy</p>
+            <div class="product-footer">
+              <span class="price">Rp 27.000</span>
+              <a href="https://r.grab.com/g/6-20260508_172156_db4c4a0ab61f464aa15148b31ac2e13e_MEXMPS-6-C3EBR6XUUFUBRX" class="btn-order" target="_blank">Order</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="coklat.png" alt="Chocolate" class="product-img" onclick="bukaModal(this.src)" />
+          </div>
+          <div class="product-info">
+            <h3>Chocolatte</h3>
+            <p>Rich and Creamy</p>
+            <div class="product-footer">
+              <span class="price">Rp 27.000</span>
+              <a href="https://r.grab.com/g/6-20260508_172156_db4c4a0ab61f464aa15148b31ac2e13e_MEXMPS-6-C3EBR6XUUFUBRX" class="btn-order" target="_blank">Order</a>
+            </div>
+          </div>
+        </div>
+
+         <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="taro.png" alt="Chocolate" class="product-img" onclick="bukaModal(this.src)" />
+          </div>
+          <div class="product-info">
+            <h3>Taro latte</h3>
+            <p>Rich and Creamy</p>
+            <div class="product-footer">
+              <span class="price">Rp 27.000</span>
+              <a href="https://r.grab.com/g/6-20260508_172156_db4c4a0ab61f464aa15148b31ac2e13e_MEXMPS-6-C3EBR6XUUFUBRX" class="btn-order" target="_blank">Order</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="galeri">
+    <div class="container">
+      <p class="section-tag">Our Gallery</p>
+      <h2 class="section-title">Pilona Ambience</h2>
+      <div class="gallery-grid">
+        <img src="geleri1.png" alt="Galeri 1" class="gallery-img" onclick="bukaModal(this.src)" />
+        <img src="geleri2.jpeg" alt="Galeri 2" class="gallery-img" onclick="bukaModal(this.src)" />
+        <img src="geleri3.jpeg" alt="Galeri 3" class="gallery-img" onclick="bukaModal(this.src)" />
+        <img src="geleri4.png" alt="Galeri 4" class="gallery-img" onclick="bukaModal(this.src)" />
+        <img src="geleri5.jpeg" alt="Galeri 5" class="gallery-img" onclick="bukaModal(this.src)" />
+        <img src="geleri6.jpeg" alt="Galeri 6" class="gallery-img" onclick="bukaModal(this.src)" />
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="review">
+    <div class="container">
+      <p class="section-tag">Pilonians Review</p>
+      <h2 class="section-title">Apa Kata Mereka?</h2>
+      <p class="section-subtitle">Kepuasan Anda adalah prioritas utama kami.</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Kopinya enak banget, creamy dan strong kopinya balance! Beda dari yang lain! Recommended!"</blockquote>
+          <div class="reviewer-info">
+            <div class="avatar">BL</div>
+            <div>
+              <div class="reviewer-name">Belly</div>
+              <div class="reviewer-title">Pelanggan sejak 2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Proses pembuatannya cepat, packagingnya rapih. Puas banget belanja di sini!"</blockquote>
+          <div class="reviewer-info">
+            <div class="avatar">AJ</div>
+            <div>
+              <div class="reviewer-name">Ajeng</div>
+              <div class="reviewer-title">Pelanggan sejak 2022</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Harganya kaki lima tapi kualitasnya premium. Barista-nya juga ramah dan responsif!"</blockquote>
+          <div class="reviewer-info">
+            <div class="avatar">HN</div>
+            <div>
+              <div class="reviewer-name">Hanna</div>
+              <div class="reviewer-title">Pelanggan sejak 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-to-order" id="cara-order">
+    <div class="container">
+      <p class="section-tag">How to Order</p>
+      <h2 class="section-title">Order Mudah hanya dengan 3 Cara</h2>
+      <p class="section-subtitle">Pesan menu kami hanya dalam 3 cara praktis</p>
+    
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">💬</div>
+          <h3>Pesan secara Langsung</h3>
+          <p>Pesan dengan datang secara langsung dan sebutkan menu pilihan Anda.</p>
+        </div>
+    
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">📱</div>
+          <h3>Pesan secara Online</h3>
+          <p>Melalui aplikasi Shopeefood, Grabfood, dan Gofood favorit Anda.</p>
+        </div>
+    
+        <div class="step-card">
+  <div class="step-number">3</div>
+  <div class="step-icon">
+    <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#6a4f4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+      <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+      <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+      <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+      <rect x="7" y="7" width="3" height="3"></rect>
+      <rect x="14" y="7" width="3" height="3"></rect>
+      <rect x="7" y="14" width="3" height="3"></rect>
+      <rect x="14" y="14" width="3" height="3"></rect>
+    </svg>
+  </div>
+  <h3>PESAN DENGAN BARCODE</h3>
+  <p>Pesan melalui barcode yang tertera pada meja dine in anda di pilona</p>
+</div>
+      
+    </div> <div class="order-cta">
+        <a href="https://r.grab.com/g/6-20260508_172156_db4c4a0ab61f464aa15148b31ac2e13e_MEXMPS-6-C3EBR6XUUFUBRX" class="order-item grab"><img src="grab.png" alt=""> <span>GrabFood</span></a>
+        <a href="https://gofood.link/a/DRGDei7" class="order-item gofood"><img src="gofood.png" alt=""> <span>GoFood</span></a>
+        <a href="https://spf.shopee.co.id/3B47HbmdSx" class="order-item shopee"><img src="shopee.png" alt=""> <span>ShopeeFood</span></a>
+      </div>
+  </div> </section>
+
+  <section class="contact" id="contact">
+  <div class="container">
+    <p class="section-tag">Visit Us</p>
+    <h2 class="section-title">Pilona Citra Raya</h2>
+    
+    <div class="contact-grid">
+      <div class="contact-info">
+        
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/6285182169268" target="_blank">+62 851-8216-9268</a>
+          </div>
+        </div> <div class="contact-item">
+          <div class="contact-icon">📸</div>
+          <div class="contact-text">
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/pilonacoffee.citraraya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">@pilonacoffee.citraraya</a>
+          </div>
+        </div> <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <strong>Alamat</strong>
+            <span>Ruko Grand Boulevard, Blok E01/230, Citra Raya</span>
+          </div>
+        </div> <div class="contact-item">
+          <div class="contact-icon">⏰</div>
+          <div class="contact-text">
+            <strong>Jam Buka</strong>
+            <span>Setiap hari: 07.00-22.00</span>
+          </div>
+        </div> </div> <div class="contact-map">
+        <p class="map-title">Lokasi Kami</p>
+        <p class="map-hint">Temukan kami di Google Maps untuk rute tercepat.</p>
+        <a href="https://maps.app.goo.gl/Pf1BVFgpy3PgMDQu8" class="btn-maps" target="_blank">Buka Maps</a>
+      </div>
+
+    </div> </div> </section>
+
+  <footer>
+    <div class="container">
+      <h3>Pilona Coffee</h3>
+      <p>Fresh brew, good vibes, and a place to belong.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pilona Coffee. Dibuat dengan sepenuh hati oleh Ana Nova Widuri & 24110310093</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modalGambar" class="modal" onclick="tutupModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="imgModal">
+  </div>
+
+  <script>
+    function bukaModal(src) {
+      document.getElementById("modalGambar").style.display = "flex";
+      document.getElementById("imgModal").src = src;
+    }
+    function tutupModal() {
+      document.getElementById("modalGambar").style.display = "none";
+    }
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("menu-toggle").checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
