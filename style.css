@@ -213,83 +213,121 @@ img {
 
 .hero {
   background: linear-gradient
-    rgba(15, 9, 6, 0.85),
-    rgba(14, 4, 0, 0.822)
+    rgba(241, 235, 232, 0.85),
+    rgba(226, 186, 173, 0.856)
 }
 
+/* ==========================================================================
+   HERO SECTION - CLEAN VERSION
+   ========================================================================== */
+
+/* Container Utama */
 .hero {
-padding-top: 70px;
+  min-height: 90vh;
+  /* Warna gradasi sesuai section How to Order */
+  background: linear-gradient(135deg, #a3947b 0%, #dbd5ca 50%, #f4f1ee 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .hero-content {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between; /* Paksa mencar kiri-kanan */
+  gap: 50px;
 }
 
-.hero-banner {
-  width: 100%;
-  max-width:400px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-
-  /* Ganti ke 'cover' jika ingin gambar memenuhi lingkaran, 
-     atau tetap 'contain' tapi pastikan alignment-nya center */
-  object-fit: contain; 
-  background-color: rgb(138, 108, 68);
-
-  padding: 40px; /* Perbesar padding agar logo tidak mepet ke pinggir lingkaran cokelat */
-  box-shadow: 0 20px 60px rgba(46, 36, 13, 0.4); /* Kasih sedikit transparansi pada shadow */
-  flex-shrink: 0;
-
-  /* --- TAMBAHKAN INI UNTUK NAIKIN POSISI --- */
-  margin-top: -80px; /* Menarik lingkaran ke atas */
-  align-self: center; /* Memastikan dia sejajar secara vertikal di flexbox */
-  
-  /* Opsional: Biar logonya lebih pas di tengah lingkaran */
-  display: block;
-}
-
+/* Sisi Teks */
 .hero-text {
   flex: 1;
-  color: var(--warna-sekunder);
+  max-width: 600px;
 }
 
 .hero-tag {
-  display: block;
-  font-size: 0.82rem;
   font-weight: 700;
-  color: var(--warna-aksen);
   text-transform: uppercase;
-  letter-spacing: 2.5px;
-  margin-bottom: 16px;
+  letter-spacing: 1.5px;
+  color: #704a32;
+  margin-bottom: 15px;
 }
 
-.hero h1 {
+.hero-text h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #31231a;
+  line-height: 1.1;
   margin-bottom: 20px;
 }
 
-.hero h2 {
-  margin-top: 0;
+.highlight {
+  color: #704a32; /* Warna cokelat aksen */
 }
 
-.hero .subtitle {
-  font-size: 1.08rem;
-  color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 36px;
-  max-width: 460px;
+.subtitle {
+  font-size: 1.1rem;
+  color: rgba(49, 35, 26, 0.8);
+  margin-bottom: 35px;
 }
 
-.hero-buttons {
+/* Lingkaran Logo Kanan */
+.hero-banner-wrapper {
+  flex-shrink: 0;
+  width: 450px;
+  height: 450px;
+  background-color: #8a6c44; /* Cokelat Pilona */
+  border-radius: 50%;
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
 }
 
+.hero-banner {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tombol */
+.btn-read {
+  display: inline-block;
+  padding: 14px 35px;
+  border: 2px solid #31231a;
+  border-radius: 50px;
+  color: #31231a;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.btn-read:hover {
+  background-color: #31231a;
+  color: #fff;
+}
+
+/* Biar gak hancur di HP */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-banner-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
 .about {
   padding: 100px 0; /* Tambah padding atas agar tidak dempet dengan section di atasnya */
   background-color: rgba(59, 44, 24, 0.904);
@@ -436,19 +474,19 @@ padding-top: 70px;
   height: 28px;
 }
 
-/* Section Wrapper (Tambahkan ini di HTML lu jika belum ada) */
+/* Section Wrapper */
 .section-produk {
-  padding: 80px 0; /* Padding konsisten dengan gallery */
-  padding-bottom: 100px 0;
+  padding: 60px 0; /* Dikurangin biar nggak terlalu lowong */
   background-color: var(--warna-putih);
-  scroll-margin-top: 100px; /* Biar pas diklik dari navbar nggak ketutup */
+  scroll-margin-top: 100px;
 }
 
-/* Container Utama - Mengatur baris dan kolom */
+/* Container Utama */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom untuk 3 atas 3 bawah */
-  gap: 30px;
+  /* Pakai repeat(auto-fit) biar otomatis nyesuain jumlah kolom */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 25px;
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -459,34 +497,35 @@ padding-top: 70px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+  /* Shadow tipis aja biar elegan, jangan terlalu item pekat */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
 }
 
 .product-card:hover {
   transform: translateY(-5px); /* Efek melayang saat di-hover */
 }
 
-/* Wrapper Gambar (Background Ungu Muda) */
+/* Wrapper Gambar */
 .product-img-wrapper {
   background-color: #f8f6ff;
   position: relative;
-  aspect-ratio: 1 / 1; 
-  width: 100%;
+  /* KUNCI: Batasin tinggi area gambar biar nggak rakus layar */
+  height: 220px; 
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 0px;
+  padding: 20px;
 }
 
 .product-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  cursor: pointer;
+  /* KUNCI: Kecilin gambarnya biar manis */
+  max-width: 160px; 
+  height: auto;
+  object-fit: contain;
   transition: transform 0.3s;
 }
 
@@ -513,24 +552,26 @@ padding-top: 70px;
   background-color: #704a32;
 }
 
-/* Info Produk */
+/* Info Produk - INI YANG TADI BIKIN PANJANG BANGET */
 .product-info {
-  padding: 80px; /* Ditambah sedikit biar teks nggak terlalu mepet border */
-  flex-grow: 1; /* Supaya tinggi card tetap sama walau panjang teks beda */
+  padding: 20px; /* DARI 80px KITA GANTI KE 20px BIAR COMPACT */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-info h3 {
   margin: 0;
   font-size: 1.1rem;
   color: #333;
-  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .product-info p {
   color: #777;
-  font-size: 0.9rem;
-  margin: 8px 0 20px 0;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  margin: 5px 0 15px 0;
+  line-height: 1.4;
 }
 
 /* Footer (Harga & Tombol) */
@@ -538,32 +579,42 @@ padding-top: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto; /* Memaksa harga & tombol selalu di bawah card */
+  margin-top: auto; 
 }
 
 .price {
   font-weight: 800;
   color: #31231a;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .btn-order {
-  background-color: #000000;
+  background-color: #000;
   color: white;
-  text-decoration: none;
-  padding: 8px 20px;
+  padding: 6px 15px;
   border-radius: 20px;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  transition: 0.3s;
 }
 
-/* Responsivitas untuk Layar Kecil/HP */
-@media (max-width: 768px) {
-    .menu-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Jadi 2 kolom kiri-kanan */
-        gap: 15px; /* Kasih jarak antar menu */
-    }
+/* Responsivitas - BIAR DI HP TETEP BISA 2 KOLOM (Gaya Minimalis) */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom biar gak capek scroll */
+    gap: 15px;
+  }
+  
+  .product-img-wrapper {
+    height: 160px; /* Kecilin lagi buat HP */
+  }
+
+  .product-img {
+    max-width: 110px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
 }
 
 .gallery {
